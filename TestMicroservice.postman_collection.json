@@ -1,0 +1,464 @@
+{
+	"info": {
+		"_postman_id": "e4ea55de-61f9-46f8-9c11-9585f2b2772c",
+		"name": "TestMicroservice",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Clientes",
+			"item": [
+				{
+					"name": "GetClientes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://test:80/clientes/getlist",
+							"protocol": "http",
+							"host": [
+								"test"
+							],
+							"port": "80",
+							"path": [
+								"clientes",
+								"getlist"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetCliente",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "idCliente",
+								"value": "1",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://test:80/clientes/get",
+							"protocol": "http",
+							"host": [
+								"test"
+							],
+							"port": "80",
+							"path": [
+								"clientes",
+								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddCliente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"identificacion\": \"0964883245\",\r\n  \"nombre\": \"Julio Larrea\",\r\n  \"genero\": \"M\",\r\n  \"edad\": 29,\r\n  \"direccion\": \"Urb La Perla Etapa 5\",\r\n  \"telefono\": \"098254785\",\r\n  \"idCliente\": 0,\r\n  \"contrasena\": \"1234\",\r\n  \"estado\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://test:80/clientes/add",
+							"protocol": "http",
+							"host": [
+								"test"
+							],
+							"port": "80",
+							"path": [
+								"clientes",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateCliente",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"identificacion\": \"0964883245\",\r\n  \"nombre\": \"Julio Larrea\",\r\n  \"genero\": \"M\",\r\n  \"edad\": 29,\r\n  \"direccion\": \"Urb La Perla Etapa 5\",\r\n  \"telefono\": \"098254785\",\r\n  \"idCliente\": 4,\r\n  \"contrasena\": \"1234\",\r\n  \"estado\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://test:80/clientes/add",
+							"protocol": "http",
+							"host": [
+								"test"
+							],
+							"port": "80",
+							"path": [
+								"clientes",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteCliente",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"identificacion\": \"0964883245\",\r\n  \"nombre\": \"Julio Larrea\",\r\n  \"genero\": \"M\",\r\n  \"edad\": 29,\r\n  \"direccion\": \"Urb La Perla Etapa 5\",\r\n  \"telefono\": \"098254785\",\r\n  \"idCliente\": 4,\r\n  \"contrasena\": \"1234\",\r\n  \"estado\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://test:80/clientes/add",
+							"protocol": "http",
+							"host": [
+								"test"
+							],
+							"port": "80",
+							"path": [
+								"clientes",
+								"add"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cuentas",
+			"item": [
+				{
+					"name": "GetCuentas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://test:80/cuentas/getlist",
+							"protocol": "http",
+							"host": [
+								"test"
+							],
+							"port": "80",
+							"path": [
+								"cuentas",
+								"getlist"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetCuenta",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "idCuenta",
+								"type": "text",
+								"value": "1"
+							}
+						],
+						"url": {
+							"raw": "http://test:80/cuentas/get",
+							"protocol": "http",
+							"host": [
+								"test"
+							],
+							"port": "80",
+							"path": [
+								"cuentas",
+								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddCuenta",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"idCuenta\": 5,\r\n  \"numeroCuenta\": 2278905,\r\n  \"tipo\": \"AHORRO\",\r\n  \"saldoInicial\": 480,\r\n  \"estado\": true,\r\n  \"idCliente\": 4\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://test:80/cuentas/add",
+							"protocol": "http",
+							"host": [
+								"test"
+							],
+							"port": "80",
+							"path": [
+								"cuentas",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateCuenta",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"idCuenta\": 5,\r\n  \"numeroCuenta\": 2278905,\r\n  \"tipo\": \"CORRIENTE\",\r\n  \"saldoInicial\": 480,\r\n  \"estado\": true,\r\n  \"idCliente\": 4\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://test:80/cuentas/update",
+							"protocol": "http",
+							"host": [
+								"test"
+							],
+							"port": "80",
+							"path": [
+								"cuentas",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteCuenta",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"idCuenta\": 5,\r\n  \"numeroCuenta\": 2278905,\r\n  \"tipo\": \"CORRIENTE\",\r\n  \"saldoInicial\": 480,\r\n  \"estado\": true,\r\n  \"idCliente\": 4\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://test:80/cuentas/delete",
+							"protocol": "http",
+							"host": [
+								"test"
+							],
+							"port": "80",
+							"path": [
+								"cuentas",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Movimientos",
+			"item": [
+				{
+					"name": "GetMovimientos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://test:80/movimientos/getlist",
+							"protocol": "http",
+							"host": [
+								"test"
+							],
+							"port": "80",
+							"path": [
+								"movimientos",
+								"getlist"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetMovimiento",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "idMovimiento",
+								"type": "text",
+								"value": "1"
+							}
+						],
+						"url": {
+							"raw": "http://test:80/movimientos/get",
+							"protocol": "http",
+							"host": [
+								"test"
+							],
+							"port": "80",
+							"path": [
+								"movimientos",
+								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddMovimiento",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"idMovimiento\": 0,\r\n  \"NumeroCuenta\": 225487,\r\n  \"fecha\": \"2022-02-10T01:09:06.496Z\",\r\n  \"tipoMovimiento\": \"Retiro\",\r\n  \"valor\": 100,\r\n  \"saldo\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://test:80/movimientos/add",
+							"protocol": "http",
+							"host": [
+								"test"
+							],
+							"port": "80",
+							"path": [
+								"movimientos",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateMovimiento",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"idMovimiento\": 0,\r\n  \"NumeroCuenta\": 225487,\r\n  \"fecha\": \"2022-02-10T01:09:06.496Z\",\r\n  \"tipoMovimiento\": \"Retiro\",\r\n  \"valor\": 100,\r\n  \"saldo\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://test:80/movimientos/update",
+							"protocol": "http",
+							"host": [
+								"test"
+							],
+							"port": "80",
+							"path": [
+								"movimientos",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteMovimiento",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"idMovimiento\": 0,\r\n  \"NumeroCuenta\": 225487,\r\n  \"fecha\": \"2022-02-10T01:09:06.496Z\",\r\n  \"tipoMovimiento\": \"Retiro\",\r\n  \"valor\": 100,\r\n  \"saldo\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://test:80/movimientos/delete",
+							"protocol": "http",
+							"host": [
+								"test"
+							],
+							"port": "80",
+							"path": [
+								"movimientos",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Reportes",
+			"item": [
+				{
+					"name": "GetReporte",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "fechaInicio",
+								"value": "2022-02-10",
+								"type": "text"
+							},
+							{
+								"key": "fechaFin",
+								"value": "2022-02-10",
+								"type": "text"
+							},
+							{
+								"key": "idCliente",
+								"value": "2",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://test:80/cuentas/getlist",
+							"protocol": "http",
+							"host": [
+								"test"
+							],
+							"port": "80",
+							"path": [
+								"cuentas",
+								"getlist"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
